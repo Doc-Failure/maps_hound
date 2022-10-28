@@ -1,0 +1,60 @@
+{
+  "timeZone": "Europe/Rome",
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "dependencies": {
+    "libraries": [
+      {
+        "userSymbol": "FirebaseApp",
+        "libraryId": "1VlYLzhwx0YEoxIe62eItLAZeobVt_l-GQUKt2MXXuBHFVsqBkl9C_yBB",
+        "version": "2"
+      }
+    ]
+  },
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/userinfo.email",
+    "https://www.googleapis.com/auth/userinfo.profile",
+    "https://www.googleapis.com/auth/script.external_request",
+    "https://www.googleapis.com/auth/script.locale",
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/script.container.ui"
+  ],
+  "addOns": {
+    "common": {
+      "name": "Maps Hound",
+      "logoUrl": "https://firebasestorage.googleapis.com/v0/b/maps-hound-366618.appspot.com/o/MH.png?alt=media&token=c34471ad-870c-40c3-b54c-861b35c64e37",
+      "useLocaleFromApp": true,
+      "homepageTrigger": {
+        "runFunction": "onHomepage",
+        "enabled": true
+      },
+      "layoutProperties": {
+        "primaryColor": "#188038",
+        "secondaryColor": "#34a853"
+      },
+      "universalActions": [
+        {
+          "label": "Manage Account",
+          "openLink": "http://maps-hound.com"
+        }
+      ]
+    },
+    "sheets": {
+      "homepageTrigger": {
+        "runFunction": "onHomepage",
+        "enabled": true
+      },
+      "onFileScopeGrantedTrigger": {
+        "runFunction": "Install"
+      }
+    }
+  },
+  "urlFetchWhitelist": [
+    "https://maps-hound-366618-default-rtdb.firebaseio.com/",
+    "https://maps.googleapis.com/",
+    "https://www.maps-hound.com/",
+    "https://firebasestorage.googleapis.com/",
+    "https://identitytoolkit.googleapis.com/"
+  ]
+}
